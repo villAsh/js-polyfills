@@ -15,6 +15,6 @@ Function.prototype.myCall = function(context = {}, ...args){
     }
 
     context.fn = this;
-    context.fn(this, ...args)
+    context.fn(...args)
 }
 ```
