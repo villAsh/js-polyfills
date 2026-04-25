@@ -17,7 +17,7 @@ function memoize(func, context){
 
         //check if stringify args are in cache or not.
         if(!cache[cacheArgs]){
-            cache[cacheArgs] = func.apply(context || this, ...args);
+            cache[cacheArgs] = func.call(context || this, ...args);
         }
 
         return cache[cacheArgs];
